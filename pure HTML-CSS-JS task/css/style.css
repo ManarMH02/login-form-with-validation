@@ -1,0 +1,105 @@
+:root{
+    --dark-blue: #34495E;
+    --dark-blue-secondary: #22313F;
+    --light-blue: #8DC6FF;
+    --green: #2ECC71;
+    --green-hover: #29b765;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+}
+body{
+    background-color: #fff;
+    font-family:  Calibri, sans-serif;
+}
+input {
+    width: 100%;
+    border-bottom: 1px solid var(--dark-blue-secondary);
+    padding: 8px 3px;
+    color: var(--dark-blue);
+}
+input::placeholder {
+    color: var(--dark-blue);
+    opacity: 70%;
+}
+h1{
+    color: var(--dark-blue);
+    font-size: 38px;
+    margin-bottom: 8%;
+}
+.container {
+    height: 100vh;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minMax(300px, 1fr));
+}
+.login-form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 6px;
+    margin: 0 auto;
+    gap: 30px;
+    padding: 5% 10px;
+    min-width: 350px;
+    --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
+}
+.login-form h2 {
+    font-size: 24px;
+    text-align: start;
+    color: var(--dark-blue);
+}
+.login-form button {
+    margin-top: 20px;
+    padding: 10px 30px;
+    width: 100%;
+    margin: 20px auto 0;
+    color: white;
+    background-color: var(--green);
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 300ms;
+}
+.login-form button:hover {
+    background-color: var(--green-hover);
+}
+.login-form div span {
+    text-align: left;
+    display: block;
+    color: red;
+    font-size: 14px;
+    margin-top: 2px;
+}
+.login-info{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.login-info img{
+    width: 100%;
+}
+@media (max-width: 575.98px) { 
+    .login-info{
+        display: none;
+    }
+    .container{
+        background-image: url('/images/loginbg-img.png');
+        background-repeat: repeat-y;
+        background-position: center;
+    }
+    .login-form{
+        background: #fff;
+        box-shadow: 3px 0px 3px 1px rgb(129 122 122 / 60%)
+    }
+}
