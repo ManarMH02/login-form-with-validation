@@ -3,7 +3,7 @@ import { useState } from "react"
 function App() {
   const [userData, setUserData] = useState({
     username: '',
-    password:''
+    password: ''
   })
   const [errors, setErrors] = useState({
     usernameError: '',
@@ -13,7 +13,7 @@ function App() {
     const { value, name } = e.target
     setUserData({ ...userData, [name]: value })
   }
-  const formValidation = ({username, password}) => {
+  const formValidation = ({ username, password }) => {
     const errors = { usernameError: '', passwordError: '' }
     if (!username) errors.usernameError = 'Please enter your username'
     if (!password) errors.passwordError = 'Please enter your password'
@@ -26,9 +26,9 @@ function App() {
 
   return (
     <>
-      <div className=" grid items-center grid-cols-[repeat(auto-fit,minMax(300px,1fr))] min-h-screen bg-[url('./public/loginbg-img.png')] bg-center bg-repeat md:bg-none">
+      <div className=" grid items-center grid-cols-[repeat(auto-fit,minMax(300px,1fr))] min-h-screen bg-[url('../public/loginbg-img.png')] bg-center bg-repeat md:bg-none">
         <div className="login-info h-full hidden md:block">
-          <img src="./public/loginbg-img.png" alt="login-photo" className="w-full h-full" />
+          <img src="../public/loginbg-img.png" alt="login-photo" className="w-full h-full" />
         </div>
         <form action=""
           onChange={onChangeHandler}

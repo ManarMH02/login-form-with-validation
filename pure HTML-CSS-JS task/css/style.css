@@ -94,7 +94,7 @@ h1{
         display: none;
     }
     .container{
-        background-image: url('/images/loginbg-img.png');
+        background-image: url('../images/loginbg-img.png');
         background-repeat: repeat-y;
         background-position: center;
     }
